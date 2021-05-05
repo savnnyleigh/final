@@ -1,0 +1,354 @@
+[
+ {
+   "Year": 2020,
+   "Area": "Austin",
+   "Employment": 556570,
+   "Civilian Labor Force": 592927,
+   "Unemployment": 36357,
+   "Unemployment Rate": 0.061
+ },
+ {
+   "Year": 2020,
+   "Area": "Austin-Round Rock MSA",
+   "Employment": 1160465,
+   "Civilian Labor Force": 1236443,
+   "Unemployment": 75977,
+   "Unemployment Rate": 0.061
+ },
+ {
+   "Year": 2020,
+   "Area": "Texas",
+   "Employment": 12900978,
+   "Civilian Labor Force": 13963757,
+   "Unemployment": 1062778,
+   "Unemployment Rate": 0.076
+ },
+ {
+   "Year": 2020,
+   "Area": "United States",
+   "Employment": 147794750,
+   "Civilian Labor Force": 160742333,
+   "Unemployment": 12947583,
+   "Unemployment Rate": 0.081
+ },
+ {
+   "Year": 2019,
+   "Area": "Austin",
+   "Employment": 577715,
+   "Civilian Labor Force": 592445,
+   "Unemployment": 14730,
+   "Unemployment Rate": 0.025
+ },
+ {
+   "Year": 2019,
+   "Area": "Austin-Round Rock MSA",
+   "Employment": 1204375,
+   "Civilian Labor Force": 1237444,
+   "Unemployment": 33069,
+   "Unemployment Rate": 0.027
+ },
+ {
+   "Year": 2019,
+   "Area": "Texas",
+   "Employment": 13551791,
+   "Civilian Labor Force": 14045312,
+   "Unemployment": 493521,
+   "Unemployment Rate": 0.035
+ },
+ {
+   "Year": 2019,
+   "Area": "United States",
+   "Employment": 157538000,
+   "Civilian Labor Force": 163539000,
+   "Unemployment": 6001000,
+   "Unemployment Rate": 0.037
+ },
+ {
+   "Year": 2018,
+   "Area": "Austin",
+   "Employment": 559123,
+   "Civilian Labor Force": 574955,
+   "Unemployment": 15832,
+   "Unemployment Rate": 0.028
+ },
+ {
+   "Year": 2018,
+   "Area": "Austin-Round Rock MSA",
+   "Employment": 1165291,
+   "Civilian Labor Force": 1200405,
+   "Unemployment": 35114,
+   "Unemployment Rate": 0.029
+ },
+ {
+   "Year": 2018,
+   "Area": "Texas",
+   "Employment": 13285118,
+   "Civilian Labor Force": 13816690,
+   "Unemployment": 531572,
+   "Unemployment Rate": 0.038
+ },
+ {
+   "Year": 2018,
+   "Area": "United States",
+   "Employment": 155761000,
+   "Civilian Labor Force": 162075000,
+   "Unemployment": 6314000,
+   "Unemployment Rate": 0.039
+ },
+ {
+   "Year": 2017,
+   "Area": "Austin",
+   "Employment": 543911,
+   "Civilian Labor Force": 560623,
+   "Unemployment": 16712,
+   "Unemployment Rate": 0.03
+ },
+ {
+   "Year": 2017,
+   "Area": "Austin-Round Rock MSA",
+   "Employment": 1122474,
+   "Civilian Labor Force": 1158919,
+   "Unemployment": 36445,
+   "Unemployment Rate": 0.031
+ },
+ {
+   "Year": 2017,
+   "Area": "Texas",
+   "Employment": 12989682,
+   "Civilian Labor Force": 13574795,
+   "Unemployment": 585113,
+   "Unemployment Rate": 0.043
+ },
+ {
+   "Year": 2017,
+   "Area": "United States",
+   "Employment": 153337000,
+   "Civilian Labor Force": 160320000,
+   "Unemployment": 6982000,
+   "Unemployment Rate": 0.044
+ },
+ {
+   "Year": 2016,
+   "Area": "Austin",
+   "Employment": 538170,
+   "Civilian Labor Force": 555270,
+   "Unemployment": 17100,
+   "Unemployment Rate": 0.031
+ },
+ {
+   "Year": 2016,
+   "Area": "Austin-Round Rock MSA",
+   "Employment": 1081654,
+   "Civilian Labor Force": 1118228,
+   "Unemployment": 36574,
+   "Unemployment Rate": 0.033
+ },
+ {
+   "Year": 2016,
+   "Area": "Texas",
+   "Employment": 12720226,
+   "Civilian Labor Force": 13335578,
+   "Unemployment": 615352,
+   "Unemployment Rate": 0.046
+ },
+ {
+   "Year": 2016,
+   "Area": "United States",
+   "Employment": 151436000,
+   "Civilian Labor Force": 159187000,
+   "Unemployment": 7751000,
+   "Unemployment Rate": 0.049
+ },
+ {
+   "Year": 2015,
+   "Area": "Austin",
+   "Employment": 521070,
+   "Civilian Labor Force": 537097,
+   "Unemployment": 16027,
+   "Unemployment Rate": 0.03
+ },
+ {
+   "Year": 2015,
+   "Area": "Austin-Round Rock MSA",
+   "Employment": 1037150,
+   "Civilian Labor Force": 1073300,
+   "Unemployment": 36150,
+   "Unemployment Rate": 0.034
+ },
+ {
+   "Year": 2015,
+   "Area": "Texas",
+   "Employment": 12505617,
+   "Civilian Labor Force": 13087237,
+   "Unemployment": 581620,
+   "Unemployment Rate": 0.044
+ },
+ {
+   "Year": 2015,
+   "Area": "United States",
+   "Employment": 148834000,
+   "Civilian Labor Force": 157130000,
+   "Unemployment": 8296000,
+   "Unemployment Rate": 0.053
+ },
+ {
+   "Year": 2014,
+   "Area": "Austin",
+   "Employment": 508899,
+   "Civilian Labor Force": 528511,
+   "Unemployment": 19612,
+   "Unemployment Rate": 0.037
+ },
+ {
+   "Year": 2014,
+   "Area": "Austin-Round Rock MSA",
+   "Employment": 1004806,
+   "Civilian Labor Force": 1048963,
+   "Unemployment": 44157,
+   "Unemployment Rate": 0.042
+ },
+ {
+   "Year": 2014,
+   "Area": "Texas",
+   "Employment": 12374172,
+   "Civilian Labor Force": 13039452,
+   "Unemployment": 665280,
+   "Unemployment Rate": 0.051
+ },
+ {
+   "Year": 2014,
+   "Area": "United States",
+   "Employment": 146305000,
+   "Civilian Labor Force": 155922000,
+   "Unemployment": 9617000,
+   "Unemployment Rate": 0.062
+ },
+ {
+   "Year": 2013,
+   "Area": "Austin",
+   "Employment": 489962,
+   "Civilian Labor Force": 513750,
+   "Unemployment": 23788,
+   "Unemployment Rate": 0.046
+ },
+ {
+   "Year": 2013,
+   "Area": "Austin-Round Rock MSA",
+   "Employment": 966601,
+   "Civilian Labor Force": 1019483,
+   "Unemployment": 52882,
+   "Unemployment Rate": 0.052
+ },
+ {
+   "Year": 2013,
+   "Area": "Texas",
+   "Employment": 12052646,
+   "Civilian Labor Force": 12857595,
+   "Unemployment": 804949,
+   "Unemployment Rate": 0.063
+ },
+ {
+   "Year": 2013,
+   "Area": "United States",
+   "Employment": 143929000,
+   "Civilian Labor Force": 155389000,
+   "Unemployment": 11460000,
+   "Unemployment Rate": 0.074
+ },
+ {
+   "Year": 2012,
+   "Area": "Austin",
+   "Employment": 473046,
+   "Civilian Labor Force": 498207,
+   "Unemployment": 25161,
+   "Unemployment Rate": 0.051
+ },
+ {
+   "Year": 2012,
+   "Area": "Austin-Round Rock MSA",
+   "Employment": 931584,
+   "Civilian Labor Force": 987653,
+   "Unemployment": 56069,
+   "Unemployment Rate": 0.057
+ },
+ {
+   "Year": 2012,
+   "Area": "Texas",
+   "Employment": 11818675,
+   "Civilian Labor Force": 12670455,
+   "Unemployment": 851780,
+   "Unemployment Rate": 0.067
+ },
+ {
+   "Year": 2012,
+   "Area": "United States",
+   "Employment": 142469000,
+   "Civilian Labor Force": 154975000,
+   "Unemployment": 12506000,
+   "Unemployment Rate": 0.081
+ },
+ {
+   "Year": 2011,
+   "Area": "Austin",
+   "Employment": 455426,
+   "Civilian Labor Force": 483618,
+   "Unemployment": 28192,
+   "Unemployment Rate": 0.058
+ },
+ {
+   "Year": 2011,
+   "Area": "Austin-Round Rock MSA",
+   "Employment": 897490,
+   "Civilian Labor Force": 960844,
+   "Unemployment": 63354,
+   "Unemployment Rate": 0.066
+ },
+ {
+   "Year": 2011,
+   "Area": "Texas",
+   "Employment": 11535095,
+   "Civilian Labor Force": 12504498,
+   "Unemployment": 969403,
+   "Unemployment Rate": 0.078
+ },
+ {
+   "Year": 2011,
+   "Area": "United States",
+   "Employment": 139869000,
+   "Civilian Labor Force": 153617000,
+   "Unemployment": 13747000,
+   "Unemployment Rate": 0.089
+ },
+ {
+   "Year": 2010,
+   "Area": "Austin",
+   "Employment": 440312,
+   "Civilian Labor Force": 469287,
+   "Unemployment": 28975,
+   "Unemployment Rate": 0.062
+ },
+ {
+   "Year": 2010,
+   "Area": "Austin-Round Rock MSA",
+   "Employment": 865461,
+   "Civilian Labor Force": 930550,
+   "Unemployment": 65089,
+   "Unemployment Rate": 0.07
+ },
+ {
+   "Year": 2010,
+   "Area": "Texas",
+   "Employment": 11244632,
+   "Civilian Labor Force": 12241970,
+   "Unemployment": 997338,
+   "Unemployment Rate": 0.081
+ },
+ {
+   "Year": 2010,
+   "Area": "United States",
+   "Employment": 139064000,
+   "Civilian Labor Force": 153889000,
+   "Unemployment": 14825000,
+   "Unemployment Rate": 0.096
+ }
+]
