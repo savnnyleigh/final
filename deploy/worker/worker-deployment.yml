@@ -1,0 +1,30 @@
+piVersion: apps/v1
+kind: Deployment
+metadata:
+  name: savsmith-final-worker
+  labels:
+    app: savsmith-final-worker
+    username: savsmith
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: savsmith-final-worker
+  template:
+    metadata:
+      labels:
+        app: savsmith-final-worker
+        username: savsmith
+    spec:
+      containers:
+        - name: savsmith-final-worker
+          imagePullPolicy: Always
+          image: savsmith/final:latest 
+          command: ['python', 'worker.py']
+          env:
+          - name: WORKER_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
+          - name: REDIS_IP
+            value: 172.17.0.1 

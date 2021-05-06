@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: savsmith-final-flask-deployment
+  labels:
+    app: savsmith-final-flask
+    username: savsmith
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: savsmith-final-flask
+  template:
+    metadata:
+      labels:
+        app: savsmith-final-flask
+        username: savsmith
+        env: test
+    spec:
+      containers:
+        - name: savsmith-final-flask
+          imagePullPolicy: Always
+          image: savsmith/final:latest
+          command: ["python", "api.py"]
+          #command: ['sleep', '999999']
+          env:
+          - name: FLASK_APP
+            value: "api.py"
+          ports:
+          - name: http
+            containerPort: 5000

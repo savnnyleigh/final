@@ -10,8 +10,11 @@ def _generate_jid():
     return str(uuid.uuid4())
 
 def _generate_job_key(jid):
+    if type(jid) == bytes:
+	jid = jid.decode('utf-8')
     return 'job.{}'.format(jid)
 
+#changes based on job
 def _instantiate_job(jid, status, start, end):
     if type(jid) == str:
         return {'id': jid,
@@ -33,6 +36,7 @@ def _queue_job(jid):
     """Add a job to the redis queue."""
     q.put(jid)
 
+#job_dict changes based on job
 def add_job(start, end, status="submitted"):
     """Add a job to the redis queue."""
     jid = _generate_jid()
@@ -41,7 +45,8 @@ def add_job(start, end, status="submitted"):
     queue_job(jid)
     return job_dict
 
-def update_job_status(jid, status):
+#changes based on job
+def update_job_status(jid, new_status):
     """Update the status of job with job id `jid` to status `status`."""
     jid, status, start, end = rd.hmget(generate_job_key(jid), 'id', 'status', 'start', 'end')
     job = _instantiate_job(jid, status, start, end)
@@ -52,7 +57,7 @@ def update_job_status(jid, status):
         rd.hset(_generate_job_key(jid), 'worker', worker_IP)
 
     if job:
-        job['status'] = status
+        job['status'] = new_status
         _save_job(_generate_job_key(jid), job)
  
    else:

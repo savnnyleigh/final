@@ -4,7 +4,13 @@ import time
 @q.worker
 def execute_job(jid):
     jobs.update_job_status(jid, 'in progress')
-    time.sleep(15)
+
+#something happens here
+
+
+
+
+
     jobs.update_job_status(jid, 'complete')
 
 execute_job()
