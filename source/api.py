@@ -23,57 +23,70 @@ def jobs_api():
 #create
 @app.route('/generate', methods=['GET'])
 def generate():
-    unemployment_data = {}
-    unemployment_data['Year'] = 
-    unemployment_data['Area'] = 
-    unemployment_data['Employment'] = 
-    unemployment_data['Civilian Labor Force'] = 
-    unemployment_data['Unemployment'] = 
-    unemployment_data['Unemployment Rate'] = 
- 
-    rd.hmset(str(uuid.uuid4()), this_animal)
+     c_year = decimal.Decimal(input('Enter Year'))
+     c_area = input('Enter updated area')
+     c_employment = decimal.Decimal(input('Enter updated number employed'))
+     c_Civ = decimal.Decimal(input('Enter updated civilian labor force'))
+     c_unem = decimal.Decimal(input('Enter updated number unemployed'))
+     c_rate = c_unem/c_Civ
+     rate['Year'] = c_year
+     rate['Area'] = c_area
+     rate['Employment'] = c_employment
+     rate['Civilian Labor Force'] = c_Civ
+     rate['Unemployment'] = c_unem
+     rate['Unemployment Rate'] = c_rate    
+
+    rd.hmset(str(uuid.uuid4()), new_data)
   
-    return '20 animals have been generated'
+    return 'Data point has been created'
 
 #read
-@app.route('/animals/created_on/<string:s_date>/<string:e_date>', methods = ['GET'])
-def get_animals(s_date,e_date):
+@app.route('/query/<year>', methods = ['GET'])
+def get_years(year):
 	test = get_data()
-	animals_r = data['animals']
+	data_r = data['Unemployment Rates']
 	list1 = []
-	start = datetime.strptime(s_date, '%Y-%m-%d')
-	end = datetime.strptime(e_date, '%Y-%m-%d')
-	for animal in animals:
-		date = datetime.strptime(animal['created_on'], '%Y-%m-%d')
-		if ((date>=start) and (date<=end)):
-			list1.append(animal)
-	return jsonify({'animals in range': list1})
+	start = datetime.strptime(year, '%Y')
+	for rate in data_r:
+		date = datetime.strptime(rate['Year'], '%Y')
+		if ((date == year)):
+			list1.append(rate)
+	return jsonify({'Data in range': list1})
 
 #update
-@app.route('/animals/mod/<string:sel_uid>', methods = ['PUT'])
-def mod_animals_uuid(sel_uid):
+@app.route('/update/<year>/<area>', methods = ['PUT'])
+def mod_animals_uuid(year,area):
 	test = get_data()
-	animals_m = data['animals']
-	for animal in animals_m:
-                if (animal['uid'] == sel_uid):
-			tail = animal['tail']
-			animal['tail'] = tail + 2
-                        return jsonify ({'modified animal':animal})
+	data_m = data['Unemployment rates']
+	for rate in data_m:
+                if ((rate['Year'] == year) and (rate['Area'] == area)):
+			n_year = decimal.Decimal(input('Enter Year'))
+			n_area = input('Enter updated area')
+			n_employment = decimal.Decimal(input('Enter updated number employed'))
+			n_Civ = decimal.Decimal(input('Enter updated civilian labor force'))
+			n_unem = decimal.Decimal(input('Enter updated number unemployed'))
+			n_rate = n_unem/n_Civ
+			rate['Year'] = n_year
+   			rate['Area'] =n_area
+   			rate['Employment'] = n_employment
+   			rate['Civilian Labor Force'] = n_Civ
+   			rate['Unemployment'] = n_unem
+   			rate['Unemployment Rate'] = n_rate
+                        return jsonify ({'Updated data' : rate})
         	else :
-                	return jsonify ({'animal': 'animal does not exist'})
+                	return 'Data point does not exist, add new entry instead'
 #delete
-@app.route('/delete/<string:s_date>/<string:e_date>', methods = ['GET'])
-def del_animals(s_date,e_date):
+@app.route('/delete/<year>/<area>', methods = ['GET'])
+def del_animals(year,area):
 	test = get_data()
-	unemployment_data_d = data['unemployment_data']
-	list2 = []
-        start = datetime.strptime(s_date, '%Y-%m-%d')
-        end = datetime.strptime(e_date, '%Y-%m-%d')
-	for animal in animals_d:
-                date = datetime.strptime(animal['created_on'], '%Y-%m-%d')
-                if ((date<start) or (date>end)):
-                        list2.append(animal)
-        return jsonify({'Unemployment data without data in range': list2})
+	data_d = data['Unemployment rates']
+	list2 = test
+        start = datetime.strptime(year, '%Y')
+	for rate in data_d:
+                date = datetime.strptime(rate['Year'], '%Y')
+                if ((date == start) and (rate['Area'] == area)):
+                        list2.append(rate)
+        return ('Data points have been deleted')
 
 
 if __name__ == '__main__':
