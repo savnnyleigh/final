@@ -23,20 +23,25 @@ def jobs_api():
 #create
 @app.route('/generate', methods=['GET'])
 def generate():
-     c_year = decimal.Decimal(input('Enter Year'))
-     c_area = input('Enter updated area')
-     c_employment = decimal.Decimal(input('Enter updated number employed'))
-     c_Civ = decimal.Decimal(input('Enter updated civilian labor force'))
-     c_unem = decimal.Decimal(input('Enter updated number unemployed'))
-     c_rate = c_unem/c_Civ
-     rate['Year'] = c_year
-     rate['Area'] = c_area
-     rate['Employment'] = c_employment
-     rate['Civilian Labor Force'] = c_Civ
-     rate['Unemployment'] = c_unem
-     rate['Unemployment Rate'] = c_rate    
+    c_year = decimal.Decimal(input('Enter Year'))
+    c_area = input('Enter updated area')
+    c_employment = decimal.Decimal(input('Enter updated number employed'))
+    c_Civ = decimal.Decimal(input('Enter updated civilian labor force'))
+    c_unem = decimal.Decimal(input('Enter updated number unemployed'))
+    c_rate = c_unem/c_Civ
 
-    rd.hmset(str(uuid.uuid4()), new_data)
+    new_data = {
+	    'Year': c_year
+	    'Area': = c_area
+	    'Employment': c_employment
+	    'Civilian Labor Force': c_Civ
+	    'Unemployment': c_unem
+	    'Unemployment Rate': c_rate    
+    }
+
+    test = get_data()
+    
+    test.push(JSON.stringify(new_data)) 
   
     return 'Data point has been created'
 
@@ -75,6 +80,7 @@ def mod_animals_uuid(year,area):
                         return jsonify ({'Updated data' : rate})
         	else :
                 	return 'Data point does not exist, add new entry instead'
+
 #delete
 @app.route('/delete/<year>/<area>', methods = ['GET'])
 def del_animals(year,area):
@@ -83,9 +89,16 @@ def del_animals(year,area):
 	list2 = test
         start = datetime.strptime(year, '%Y')
 	for rate in data_d:
-                date = datetime.strptime(rate['Year'], '%Y')
-                if ((date == start) and (rate['Area'] == area)):
-                        list2.append(rate)
+            date = datetime.strptime(rate['Year'], '%Y')
+            if ((date == start) and (rate['Area'] == area)):
+                list2.remove(rate)
+
+
+	 with open("unemployment_rates.json", "r") as json_file:
+    	    json.dump(list2, json_file)
+    
+
+
         return ('Data points have been deleted')
 
 
