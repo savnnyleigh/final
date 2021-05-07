@@ -1,1 +1,31 @@
-hold
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: savsmith-final-redis-deployment
+  labels:
+    app: savsmith-final-redis
+    username: savsmith
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: savsmith-final-redis
+  template:
+    metadata:
+      labels:
+        app: savsmith-final-redis
+        username: savsmith
+        env: test
+    spec:
+      containers:
+        - name: final
+          imagePullPolicy: Always
+          image: redis:5.0.0
+          volumeMounts:
+          - name: final-savsmith
+            mountPath: "/data"
+      volumes:
+      - name: final-savsmith
+        persistentVolumeClaim:
+          claimName: savsmith-final-pvc

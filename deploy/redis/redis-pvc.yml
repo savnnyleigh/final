@@ -1,1 +1,14 @@
-hold
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: savsmith-final-pvc
+  labels:
+    username: savsmith
+    env: test
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: rbd
+  resources:
+    requests:
+      storage: 1Gi
