@@ -24,19 +24,19 @@ def jobs_api():
 @app.route('/generate', methods=['GET'])
 def generate():
     c_year = decimal.Decimal(input('Enter Year'))
-    c_area = input('Enter updated area')
+    c_area = string(input('Enter updated area'))
     c_employment = decimal.Decimal(input('Enter updated number employed'))
     c_Civ = decimal.Decimal(input('Enter updated civilian labor force'))
     c_unem = decimal.Decimal(input('Enter updated number unemployed'))
     c_rate = c_unem/c_Civ
 
     new_data = {
-	    'Year': c_year
-	    'Area': = c_area
-	    'Employment': c_employment
-	    'Civilian Labor Force': c_Civ
-	    'Unemployment': c_unem
-	    'Unemployment Rate': c_rate    
+	    "Year": c_year,
+	    "Area": c_area,
+	    "Employment": c_employment,
+	    "Civilian Labor Force": c_Civ,
+	    "Unemployment": c_unem,
+	    "Unemployment Rate": c_rate    
     }
 
     test = get_data()
@@ -65,19 +65,19 @@ def mod_animals_uuid(year,area):
 	data_m = data['Unemployment rates']
 	for rate in data_m:
                 if ((rate['Year'] == year) and (rate['Area'] == area)):
-			n_year = decimal.Decimal(input('Enter Year'))
-			n_area = input('Enter updated area')
-			n_employment = decimal.Decimal(input('Enter updated number employed'))
-			n_Civ = decimal.Decimal(input('Enter updated civilian labor force'))
-			n_unem = decimal.Decimal(input('Enter updated number unemployed'))
-			n_rate = n_unem/n_Civ
-			rate['Year'] = n_year
-   			rate['Area'] =n_area
-   			rate['Employment'] = n_employment
-   			rate['Civilian Labor Force'] = n_Civ
-   			rate['Unemployment'] = n_unem
-   			rate['Unemployment Rate'] = n_rate
-                        return jsonify ({'Updated data' : rate})
+		    n_year = decimal.Decimal(input('Enter Year'))
+		    n_area = input('Enter updated area')
+		    n_employment = decimal.Decimal(input('Enter updated number employed'))
+		    n_Civ = decimal.Decimal(input('Enter updated civilian labor force'))
+		    n_unem = decimal.Decimal(input('Enter updated number unemployed'))
+		    n_rate = n_unem/n_Civ
+		    rate['Year'] = n_year
+   		    rate['Area'] = n_area
+   		    rate['Employment'] = n_employment
+   		    rate['Civilian Labor Force'] = n_Civ
+   		    rate['Unemployment'] = n_unem
+   		    rate['Unemployment Rate'] = n_rate
+                return jsonify ({'Updated data' : rate})
         	else :
                 	return 'Data point does not exist, add new entry instead'
 
